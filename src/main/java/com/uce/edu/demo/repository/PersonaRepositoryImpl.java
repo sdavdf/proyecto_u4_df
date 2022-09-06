@@ -45,8 +45,8 @@ public class PersonaRepositoryImpl implements IPersonaRepository {
 	@Override
 	public List<Persona> buscarTodos() {
 		// TODO Auto-generated method stub
-		TypedQuery<Persona> myQuery = this.entityManager.createNamedQuery("SELECT p FROM Persona p", Persona.class);
-		return myQuery.getResultList();
+		 TypedQuery<Persona> myQuery = this.entityManager.createQuery("SELECT p FROM Persona p", Persona.class);
+	        return myQuery.getResultList();
 	}
 
 }
